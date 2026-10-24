@@ -1,0 +1,11 @@
+{
+  "name": "알레르기 체크 백엔드",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "pip install -r backend/requirements-dev.txt",
+  "forwardPorts": [8000],
+  "portsAttributes": { "8000": { "label": "FastAPI", "onAutoForward": "notify" } },
+  "secrets": {
+    "DATABASE_URL": { "description": "app_backend 계정의 Supabase Session pooler 접속 문자열" }
+  },
+  "customizations": { "vscode": { "extensions": ["ms-python.python"] } }
+}

@@ -3,13 +3,15 @@
 
 사용법 (CapstoneProject 폴더에서):
     python scripts/build_seed.py
-(prepare_data.py 실행 후라면 data_out/ 의 실데이터에서 개발용 샘플도 함께 뽑는다)
+(prepare_data.py 실행 후라면 csv/ 의 실데이터에서 개발용 샘플도 함께 뽑는다)
 
 ※ 동의어·제외어는 '초안'이다. 107만 행 원재료에서 표기 빈도를 확인해 PM과 보완할 것.
 ※ 제외어는 반드시 알레르겐별로 둔다. 메밀은 WHEAT의 제외어이고 BUCKWHEAT의 동의어다.
 """
 import json
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent  # CapstoneProject 폴더
 
 # code, 한글명, 법정여부, [동의어], [제외어]
 A = [
@@ -115,7 +117,7 @@ rules = [{"pattern": p, "rule_type": r, "note": n} for p, r, n in T]
 samples = []
 try:
     import pandas as pd
-    d = Path("data_out")
+    d = ROOT / "csv"
     pr = pd.read_csv(d / "product_reports.csv", dtype=str, keep_default_na=False)
     bc = pd.read_csv(d / "barcodes.csv", dtype=str, keep_default_na=False)
     want = {
@@ -147,7 +149,7 @@ except Exception as e:
 
 seed = {"allergens": allergens, "allergen_keywords": keywords,
         "term_rules": rules, "samples": samples}
-Path("seed.json").write_text(json.dumps(seed, ensure_ascii=False, indent=2), encoding="utf-8")
+(ROOT / "seed.json").write_text(json.dumps(seed, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def q(s):
@@ -165,8 +167,8 @@ sql.append(") as v(code, keyword, is_exclusion)\njoin public.allergens a on a.co
 sql.append("insert into public.term_rules (pattern, rule_type, note) values")
 sql.append(",\n".join(f"  ({q(t['pattern'])}, {q(t['rule_type'])}, {q(t['note'])})" for t in rules) + ";")
 sql.append("commit;")
-Path("sql").mkdir(exist_ok=True)
-Path("sql/03_seed.sql").write_text("\n".join(sql) + "\n", encoding="utf-8")
+(ROOT / "sql").mkdir(exist_ok=True)
+(ROOT / "sql" / "03_seed.sql").write_text("\n".join(sql) + "\n", encoding="utf-8")
 
 ex = sum(k["is_exclusion"] for k in keywords)
 print(f"allergens {len(allergens)} / keywords {len(keywords)-ex} (+제외어 {ex}) / term_rules {len(rules)} / samples {len(samples)}")

@@ -1,16 +1,34 @@
-# 비밀 정보
+# ===== 비밀 정보 (절대 올리지 않는다) =====
 .env
 .env.*
 !.env.example
+*.pem
+*.key
 
-# 대용량 데이터 (git에 올리지 않는다)
+# ===== 대용량 데이터 (GitHub는 파일당 100MB 초과 시 push 거부) =====
+# 원본 gz는 식약처에서 다시 받을 수 있고, 가공본은 scripts/prepare_data.py 로 다시 만들 수 있다.
 csvgz/
 csv/
 data_out/
 *.csv
 *.csv.gz
+*.gz
 
-# Python
+# ===== Python =====
 __pycache__/
-*.pyc
+*.py[cod]
 .venv/
+venv/
+.pytest_cache/
+
+# ===== Node (프론트엔드 추가 시) =====
+node_modules/
+dist/
+
+# ===== 에디터·OS =====
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*

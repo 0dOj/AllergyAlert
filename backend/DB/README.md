@@ -1,5 +1,8 @@
 # 알레르기 체크 앱 — DB 안내 (팀원용)
 
+> 이 폴더(`backend/DB`)에 DB 관련 파일이 모여 있다: `sql/`(스키마·시드·검증), `scripts/`(가공·적재·점검), `seed.json`, 원본/가공 데이터(`csvgz/`, `csv/`, git 제외).
+> 명령은 모두 저장소 루트(`CapstoneProject`)에서 실행한다고 가정한다.
+
 Supabase(PostgreSQL)에 식약처 공공데이터와 알레르겐 사전이 들어 있다. 설계 근거는 `3 데이터 모델.md`.
 
 ## 1. 접속 방법
@@ -14,7 +17,7 @@ Supabase(PostgreSQL)에 식약처 공공데이터와 알레르겐 사전이 들�
 2. 접속 문자열은 **Session pooler** 주소(포트 5432)다. Direct connection(IPv6 전용)은 쓰지 않는다.
 3. 비밀번호에 `@ / : # ?` 같은 문자가 있으면 URL 인코딩이 필요하다 (Python: `urllib.parse.quote(pw, safe="")`).
 4. SQLAlchemy는 드라이버를 지정한다: `postgresql+psycopg://...` (`pip install "psycopg[binary]"`).
-5. 접속이 되는지: `python scripts/check_roles.py`
+5. 접속이 되는지: `python backend/DB/scripts/check_roles.py`
 
 권한은 계정별로 제한되어 있다. `app_backend` 는 참조 데이터를 읽고 `user_profile`·`scan_history` 를 읽고 쓴다. `barcodes`·`product_reports` 는 쓸 수 없다. 스키마 변경과 시드 수정은 관리자(프로젝트 소유자)가 한다.
 
@@ -117,17 +120,17 @@ delete from scan_history where id = :id;
 - 무료 플랜 DB 한도 500MB. 현재 약 431MB다. 인덱스·데이터를 추가하기 전에 크기를 확인한다.
 - 7일 동안 활동이 없으면 무료 프로젝트는 일시정지된다. 시연 전에 접속해 깨어 있는지 확인한다.
 - 바코드 데이터는 2018년 이후 갱신이 중단되어 최신 제품은 없다. 전체 조인율은 약 40%다.
-- 동의어·제외어 사전은 초안이다. 실데이터 빈도로 검증해 보완한다 (`scripts/build_seed.py` 수정 후 `sql/03_seed.sql` 재실행, 또는 대시보드 Table Editor).
+- 동의어·제외어 사전은 초안이다. 실데이터 빈도로 검증해 보완한다 (`backend/DB/scripts/build_seed.py` 수정 후 `backend/DB/sql/03_seed.sql` 재실행, 또는 대시보드 Table Editor).
 
 ## 6. DB를 처음부터 다시 만들기
 
-복구용 절차다 (원본 데이터: `csvgz/*.csv.gz`).
-1. SQL Editor: `sql/01_schema.sql` -> `sql/03_seed.sql` -> `sql/05_roles.sql` (비밀번호 설정 포함)
-2. `python scripts/prepare_data.py`
-3. `python scripts/load_data.py --indexes`
-4. `sql/04_verify.sql` 로 검증
+복구용 절차다 (원본 데이터: `backend/DB/csvgz/*.csv.gz`).
+1. SQL Editor: `backend/DB/sql/01_schema.sql` -> `03_seed.sql` -> `05_roles.sql` (비밀번호 설정 포함)
+2. `python backend/DB/scripts/prepare_data.py`
+3. `python backend/DB/scripts/load_data.py --indexes`
+4. `backend/DB/sql/04_verify.sql` 로 검증
 
 ## 7. 변경 규칙
 
-- 스키마 변경은 `sql/` 폴더에 번호를 붙인 SQL 파일로 남기고(예: `06_xxx.sql`), 대시보드에서 직접 고치지 않는다.
-- 데이터를 `scripts/` 외의 방법으로 수정했다면 팀에 알린다.
+- 스키마 변경은 `backend/DB/sql/` 폴더에 번호를 붙인 SQL 파일로 남기고(예: `06_xxx.sql`), 대시보드에서 직접 고치지 않는다.
+- 데이터를 `backend/DB/scripts/` 외의 방법으로 수정했다면 팀에 알린다.
