@@ -1,0 +1,2101 @@
+{
+  "allergens": [
+    {
+      "id": 1,
+      "code": "EGG",
+      "name_ko": "알류(가금류)",
+      "is_statutory": true
+    },
+    {
+      "id": 2,
+      "code": "MILK",
+      "name_ko": "우유",
+      "is_statutory": true
+    },
+    {
+      "id": 3,
+      "code": "BUCKWHEAT",
+      "name_ko": "메밀",
+      "is_statutory": true
+    },
+    {
+      "id": 4,
+      "code": "PEANUT",
+      "name_ko": "땅콩",
+      "is_statutory": true
+    },
+    {
+      "id": 5,
+      "code": "SOYBEAN",
+      "name_ko": "대두",
+      "is_statutory": true
+    },
+    {
+      "id": 6,
+      "code": "WHEAT",
+      "name_ko": "밀",
+      "is_statutory": true
+    },
+    {
+      "id": 7,
+      "code": "MACKEREL",
+      "name_ko": "고등어",
+      "is_statutory": true
+    },
+    {
+      "id": 8,
+      "code": "CRAB",
+      "name_ko": "게",
+      "is_statutory": true
+    },
+    {
+      "id": 9,
+      "code": "SHRIMP",
+      "name_ko": "새우",
+      "is_statutory": true
+    },
+    {
+      "id": 10,
+      "code": "PORK",
+      "name_ko": "돼지고기",
+      "is_statutory": true
+    },
+    {
+      "id": 11,
+      "code": "PEACH",
+      "name_ko": "복숭아",
+      "is_statutory": true
+    },
+    {
+      "id": 12,
+      "code": "TOMATO",
+      "name_ko": "토마토",
+      "is_statutory": true
+    },
+    {
+      "id": 13,
+      "code": "SULFITES",
+      "name_ko": "아황산류",
+      "is_statutory": true
+    },
+    {
+      "id": 14,
+      "code": "WALNUT",
+      "name_ko": "호두",
+      "is_statutory": true
+    },
+    {
+      "id": 15,
+      "code": "CHICKEN",
+      "name_ko": "닭고기",
+      "is_statutory": true
+    },
+    {
+      "id": 16,
+      "code": "BEEF",
+      "name_ko": "쇠고기",
+      "is_statutory": true
+    },
+    {
+      "id": 17,
+      "code": "SQUID",
+      "name_ko": "오징어",
+      "is_statutory": true
+    },
+    {
+      "id": 18,
+      "code": "SHELLFISH",
+      "name_ko": "조개류",
+      "is_statutory": true
+    },
+    {
+      "id": 19,
+      "code": "OYSTER",
+      "name_ko": "굴",
+      "is_statutory": true
+    },
+    {
+      "id": 20,
+      "code": "ABALONE",
+      "name_ko": "전복",
+      "is_statutory": true
+    },
+    {
+      "id": 21,
+      "code": "MUSSEL",
+      "name_ko": "홍합",
+      "is_statutory": true
+    },
+    {
+      "id": 22,
+      "code": "PINENUT",
+      "name_ko": "잣",
+      "is_statutory": true
+    }
+  ],
+  "allergen_keywords": [
+    {
+      "allergen_code": "EGG",
+      "keyword": "계란",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "달걀",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "난백",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "난황",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "전란",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "난각",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "알류",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "계란분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "난분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "건조란",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "액란",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "난백분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "난황분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "전란분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "오리알",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "메추리알",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "EGG",
+      "keyword": "마요네즈",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "우유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "유청",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "유청분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "유청단백",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "유청단백분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "탈지분유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "전지분유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "분유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "혼합분유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "조제분유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "혼합탈지분유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "유당",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "락토오스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "버터",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "카제인",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "카제인나트륨",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "유크림",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "생크림",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "크림치즈",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "연유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "우유단백",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "우유분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "농축우유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "탈지우유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "유단백",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "유지방",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "락토페린",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "요구르트",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "요거트",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "발효유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "가공유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "탈지농축유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "치즈",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "밀크",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "밀크파우더",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "가공유크림",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "밀크칼슘",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "코코넛밀크",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "아몬드밀크",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "귀리밀크",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "오트밀크",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "쌀밀크",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "코코아버터",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "카카오버터",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "시어버터",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "코코넛버터",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "땅콩버터",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "MILK",
+      "keyword": "아몬드버터",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "BUCKWHEAT",
+      "keyword": "메밀",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BUCKWHEAT",
+      "keyword": "메밀가루",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BUCKWHEAT",
+      "keyword": "메밀분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BUCKWHEAT",
+      "keyword": "메밀면",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BUCKWHEAT",
+      "keyword": "메밀전분",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BUCKWHEAT",
+      "keyword": "메밀껍질",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BUCKWHEAT",
+      "keyword": "메밀차",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BUCKWHEAT",
+      "keyword": "쓴메밀",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BUCKWHEAT",
+      "keyword": "타타리메밀",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEANUT",
+      "keyword": "땅콩",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEANUT",
+      "keyword": "땅콩버터",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEANUT",
+      "keyword": "땅콩분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEANUT",
+      "keyword": "땅콩가루",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEANUT",
+      "keyword": "땅콩기름",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEANUT",
+      "keyword": "땅콩유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEANUT",
+      "keyword": "땅콩분태",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEANUT",
+      "keyword": "낙화생",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEANUT",
+      "keyword": "땅콩호박",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "대두",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "콩",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "대두유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "대두단백",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "분리대두단백",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "농축대두단백",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "대두레시틴",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "된장",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "간장",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "양조간장",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "진간장",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "국간장",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "두부",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "청국장",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "고추장",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "메주",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "두유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "콩가루",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "콩기름",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "대두분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "탈지대두",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "대두박",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "콩단백",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "쌈장",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "춘장",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "템페",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "낫토",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "두반장",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "대두이소플라본",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "비지",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "검은콩",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "서리태",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "쥐눈이콩",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "콩나물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "땅콩",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "완두콩",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "강낭콩",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "병아리콩",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "렌틸콩",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "작두콩",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "커피콩",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "코코아콩",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "SOYBEAN",
+      "keyword": "카카오콩",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "밀",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "밀가루",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "소맥",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "소맥분",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "소맥분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "소맥전분",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "밀전분",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "글루텐",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "밀글루텐",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "강력분",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "중력분",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "박력분",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "통밀",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "밀단백",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "밀배아",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "밀기울",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "듀럼밀",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "세몰리나",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "카무트",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "메밀",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "호밀",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "밀크",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "밀랍",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "밀감",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "아밀라아제",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "아밀로오스",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "아밀로펙틴",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "WHEAT",
+      "keyword": "아밀",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "MACKEREL",
+      "keyword": "고등어",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MACKEREL",
+      "keyword": "고등어살",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MACKEREL",
+      "keyword": "고등어추출물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MACKEREL",
+      "keyword": "고등어분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MACKEREL",
+      "keyword": "고등어엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "게",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "꽃게",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "대게",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "홍게",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "킹크랩",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "게살",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "게맛살",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "게추출물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "게분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "게엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "게르마늄",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "게르마",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "지게미",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "CRAB",
+      "keyword": "당게",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "새우",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "대하",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "보리새우",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "꽃새우",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "건새우",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "새우살",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "새우분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "새우추출물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "새우엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "새우젓",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "칵테일새우",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHRIMP",
+      "keyword": "흰다리새우",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돼지고기",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돼지",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돈육",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돈지",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돈피",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돈골",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돼지껍질",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돼지껍데기",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돼지기름",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돈지방",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "라드",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "포크",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "베이컨",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "족발",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돼지사골",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돈사골",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PORK",
+      "keyword": "돼지감자",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "PEACH",
+      "keyword": "복숭아",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEACH",
+      "keyword": "복숭아농축액",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEACH",
+      "keyword": "복숭아퓨레",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEACH",
+      "keyword": "복숭아과즙",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEACH",
+      "keyword": "복숭아과육",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEACH",
+      "keyword": "복숭아분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEACH",
+      "keyword": "황도",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEACH",
+      "keyword": "백도",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PEACH",
+      "keyword": "천도복숭아",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "TOMATO",
+      "keyword": "토마토",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "TOMATO",
+      "keyword": "토마토페이스트",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "TOMATO",
+      "keyword": "토마토퓨레",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "TOMATO",
+      "keyword": "토마토케첩",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "TOMATO",
+      "keyword": "케첩",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "TOMATO",
+      "keyword": "토마토분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "TOMATO",
+      "keyword": "토마토농축액",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "TOMATO",
+      "keyword": "방울토마토",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "TOMATO",
+      "keyword": "건조토마토",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "TOMATO",
+      "keyword": "토마토과즙",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "TOMATO",
+      "keyword": "토마토엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SULFITES",
+      "keyword": "아황산",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SULFITES",
+      "keyword": "이산화황",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SULFITES",
+      "keyword": "무수아황산",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SULFITES",
+      "keyword": "메타중아황산",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SULFITES",
+      "keyword": "피로아황산",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SULFITES",
+      "keyword": "차아황산",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SULFITES",
+      "keyword": "중아황산",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SULFITES",
+      "keyword": "아황산염",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WALNUT",
+      "keyword": "호두",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WALNUT",
+      "keyword": "호두분태",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WALNUT",
+      "keyword": "호두분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WALNUT",
+      "keyword": "호두유",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WALNUT",
+      "keyword": "호두기름",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WALNUT",
+      "keyword": "호두가루",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WALNUT",
+      "keyword": "호두과자",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "WALNUT",
+      "keyword": "미국호두",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭고기",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "계육",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "치킨",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭가슴살",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭다리살",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭껍질",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭뼈",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭발",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "육계",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭고기분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "계육분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭추출물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭뼈추출물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "치킨엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "치킨파우더",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "치킨분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "계골",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "CHICKEN",
+      "keyword": "닭의장풀",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "쇠고기",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "소고기",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "우육",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "비프",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "우지",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "쇠기름",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "소기름",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "한우",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "육우",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "우골",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "우족",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "소뼈",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "쇠뼈",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "쇠사골",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "소사골",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "우사골",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "쇠고기분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "소고기분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "쇠고기추출물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "소고기엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "비프엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "비프분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "BEEF",
+      "keyword": "쇠고기엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SQUID",
+      "keyword": "오징어",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SQUID",
+      "keyword": "오징어살",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SQUID",
+      "keyword": "오징어먹물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SQUID",
+      "keyword": "오징어분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SQUID",
+      "keyword": "오징어추출물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SQUID",
+      "keyword": "오징어엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SQUID",
+      "keyword": "오징어채",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SQUID",
+      "keyword": "오징어다리",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SQUID",
+      "keyword": "갑오징어",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SQUID",
+      "keyword": "한치",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SQUID",
+      "keyword": "마른오징어",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "조개",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "조개류",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "바지락",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "가리비",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "꼬막",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "백합",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "재첩",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "모시조개",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "대합",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "키조개",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "맛조개",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "피조개",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "개량조개",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "조개살",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "조개추출물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "바지락분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "바지락엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "조개엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "조개육수",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "SHELLFISH",
+      "keyword": "백합뿌리",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴소스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴추출물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴농축액",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴농축엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "석화",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "참굴",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴젓",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴즙",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴비",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "토굴",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "동굴",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "석굴",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴곡",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "OYSTER",
+      "keyword": "굴뚝",
+      "is_exclusion": true
+    },
+    {
+      "allergen_code": "ABALONE",
+      "keyword": "전복",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "ABALONE",
+      "keyword": "전복내장",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "ABALONE",
+      "keyword": "전복추출물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "ABALONE",
+      "keyword": "전복엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "ABALONE",
+      "keyword": "전복분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MUSSEL",
+      "keyword": "홍합",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MUSSEL",
+      "keyword": "홍합추출물",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MUSSEL",
+      "keyword": "홍합분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MUSSEL",
+      "keyword": "홍합엑기스",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MUSSEL",
+      "keyword": "담치",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MUSSEL",
+      "keyword": "진주담치",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "MUSSEL",
+      "keyword": "지중해담치",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PINENUT",
+      "keyword": "잣",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PINENUT",
+      "keyword": "잣가루",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PINENUT",
+      "keyword": "잣분말",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PINENUT",
+      "keyword": "잣기름",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PINENUT",
+      "keyword": "잣죽",
+      "is_exclusion": false
+    },
+    {
+      "allergen_code": "PINENUT",
+      "keyword": "잣나무",
+      "is_exclusion": true
+    }
+  ],
+  "term_rules": [
+    {
+      "pattern": "$가공품",
+      "rule_type": "compound",
+      "note": "서류가공품·곡류가공품 등. 실측 6,214회(모델 문서)"
+    },
+    {
+      "pattern": "복합조미식품",
+      "rule_type": "compound",
+      "note": "실측 3,196회"
+    },
+    {
+      "pattern": "복합조미료",
+      "rule_type": "compound",
+      "note": "하위 성분 미표기"
+    },
+    {
+      "pattern": "혼합제제",
+      "rule_type": "compound",
+      "note": "제제 계열. 실측 2,790회"
+    },
+    {
+      "pattern": "식품첨가물혼합제제",
+      "rule_type": "compound",
+      "note": "하위 성분 미표기"
+    },
+    {
+      "pattern": "$제제",
+      "rule_type": "compound",
+      "note": "접미사 제제"
+    },
+    {
+      "pattern": "$소스",
+      "rule_type": "compound",
+      "note": "실측 2,680회"
+    },
+    {
+      "pattern": "혼합분유",
+      "rule_type": "compound",
+      "note": "복합원재료이면서 우유. 알레르겐 매칭도 함께 적용(danger 우선). 실측 96회"
+    },
+    {
+      "pattern": "$시즈닝",
+      "rule_type": "compound",
+      "note": "○○시즈닝"
+    },
+    {
+      "pattern": "혼합조미료",
+      "rule_type": "compound",
+      "note": "하위 성분 미표기"
+    },
+    {
+      "pattern": "조미식품",
+      "rule_type": "compound",
+      "note": "하위 성분 미표기"
+    },
+    {
+      "pattern": "$양념",
+      "rule_type": "compound",
+      "note": "양념류"
+    },
+    {
+      "pattern": "혼합양념",
+      "rule_type": "compound",
+      "note": "하위 성분 미표기"
+    },
+    {
+      "pattern": "혼합분말",
+      "rule_type": "compound",
+      "note": "하위 성분 미표기"
+    },
+    {
+      "pattern": "$베이스",
+      "rule_type": "compound",
+      "note": "혼합조미베이스 등"
+    },
+    {
+      "pattern": "$드레싱",
+      "rule_type": "compound",
+      "note": "하위 성분 미표기"
+    },
+    {
+      "pattern": "$조미액",
+      "rule_type": "compound",
+      "note": "하위 성분 미표기"
+    },
+    {
+      "pattern": "$향",
+      "rule_type": "flavor",
+      "note": "향료. 해당 식품 단백질이 없을 수 있어 danger를 caution으로 낮춤"
+    },
+    {
+      "pattern": "$향료",
+      "rule_type": "flavor",
+      "note": "합성향료·천연향료"
+    },
+    {
+      "pattern": "합성향료",
+      "rule_type": "flavor",
+      "note": "향료"
+    },
+    {
+      "pattern": "천연향료",
+      "rule_type": "flavor",
+      "note": "향료"
+    },
+    {
+      "pattern": "$플레이버",
+      "rule_type": "flavor",
+      "note": "향료"
+    },
+    {
+      "pattern": "또는",
+      "rule_type": "ambiguous",
+      "note": "땅콩 또는 견과류가공품 등. 실측 434회"
+    },
+    {
+      "pattern": "두류",
+      "rule_type": "ambiguous",
+      "note": "대두 여부 특정 불가. 실측 294회"
+    },
+    {
+      "pattern": "식물성크림",
+      "rule_type": "ambiguous",
+      "note": "원료 특정 불가. 실측 530회"
+    },
+    {
+      "pattern": "견과류",
+      "rule_type": "ambiguous",
+      "note": "어떤 견과인지 특정 불가"
+    },
+    {
+      "pattern": "레시틴",
+      "rule_type": "ambiguous",
+      "note": "대두/해바라기 등 원료 불명"
+    }
+  ],
+  "samples": [
+    {
+      "report_no": "19730443003404",
+      "product_name": "공룡초콜릿",
+      "raw_material": "구연산철암모늄, 산화아연, 백설탕, 코코아매스, 혼합탈지분유, 가공유지, 전지분유, 코코아버터, 유당, 밀크칼슘혼합품, 레시틴, 글리세린지방산에스테르, 천연바닐라추출물, 복합, 혼합탈지분유, 탈지분유, 유청분말, 유청단백분말, 밀크칼슘혼합품, 밀크칼슘",
+      "barcodes": [
+        "8809214405876"
+      ],
+      "purpose": "공룡초콜릿: 우유 다수, 혼합분유(복합)"
+    },
+    {
+      "report_no": "19960080359718",
+      "product_name": "5가지 재료로만 만든 메밀부침가루",
+      "raw_material": "메밀가루, 메밀가루, 밀가루, 천일염, 찰보리가루, 현미가루",
+      "barcodes": [
+        "8801007702780",
+        "8801007334158"
+      ],
+      "purpose": "메밀부침가루: 밀 vs 메밀 구분"
+    },
+    {
+      "report_no": "19810336006127",
+      "product_name": "CW청우 불닭오징어땅콩",
+      "raw_material": "혼합제제, 5-리보뉴클레오티드이나트륨, 안나토색소, 정제소금, 새우엑기스, 조미건어포, 탄산수소암모늄, 쌀가루, 복합조미식품, 물엿, 팜올레인유, 설탕, 밀가루, 전분가공품, 땅콩 또는 견과류가공품",
+      "barcodes": [
+        "8801204904369"
+      ],
+      "purpose": "불닭오징어땅콩: 오징어·새우·모호(또는)·복합"
+    },
+    {
+      "report_no": "2016052807641",
+      "product_name": "365품 리얼ICED 피치",
+      "raw_material": "복숭아, 복숭아향, 설탕, 구연산",
+      "barcodes": [
+        "8809575200479"
+      ],
+      "purpose": "복숭아+복숭아향: 직접 매칭 + 향료"
+    },
+    {
+      "report_no": "20110493072173",
+      "product_name": "JEJUMON 복숭아에이드",
+      "raw_material": "복숭아향, 구연산, 복사나무열매농축액, 백설탕, 정제수, 비타민 C(고시형), 홍차향, 물엿, 홍차분말, 수크랄로스",
+      "barcodes": [
+        "8809351441928",
+        "8809351441973"
+      ],
+      "purpose": "복숭아에이드: 복숭아향만 → caution(향료)"
+    },
+    {
+      "report_no": "2000047506963",
+      "product_name": "(상)동치미",
+      "raw_material": "정제수, 갓, 대파, 양파, 마늘, 천일염, 무",
+      "barcodes": [
+        "8809334526154"
+      ],
+      "purpose": "동치미: 정제수·채소 → safe 기대"
+    },
+    {
+      "report_no": "2012018838063",
+      "product_name": "21곡 한입 크리스피",
+      "raw_material": "치즈혼합분말, 유청분말, 혼합곡물, 버터혼합분말, 전지분유, 분말결정포도당, 밀가루, 기타가공품, 옥수수전분, 녹두가루, 결정셀룰로스, 탄산칼슘, 볶은연꽃씨앗분말, 코코아분말, 레시틴, 간장분말, 정제소금, 콩기름(대두유), 말토덱스트린혼합제제, 혼합분유, 팜유, 팜올레인유, 쌀가루, 설탕, 현미가루, 옥수수가루",
+      "barcodes": [
+        "8809378268393"
+      ],
+      "purpose": "21곡 한입 크리스피: 우유·밀·대두·혼합분유 다수"
+    },
+    {
+      "report_no": "20110618121275",
+      "product_name": "땅콩호박",
+      "raw_material": "호박추출액, 옥수수수염농축액, 혼합허브추출물",
+      "barcodes": [],
+      "purpose": "땅콩호박: 제품명 오탐(땅콩 제외어) 확인용"
+    },
+    {
+      "report_no": "201603750775",
+      "product_name": "GE강화게르마늄발효분말",
+      "raw_material": "검은콩,검은깨, 대두발효분말, 게르마늄효모(기능성원료인정New제2007-15호), 다시마분말",
+      "barcodes": [],
+      "purpose": "게르마늄 포함: 게 오탐 확인용"
+    },
+    {
+      "report_no": "19950306274362",
+      "product_name": "스파게티면",
+      "raw_material": "건면, 채종유(유채유또는카놀라유), 혼합제제",
+      "barcodes": [
+        "8801118001802",
+        "8801118001826"
+      ],
+      "purpose": "스파게티면: 복합원재료(혼합제제)만 → caution 기대"
+    }
+  ]
+}
