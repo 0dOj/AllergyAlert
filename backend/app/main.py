@@ -4,7 +4,7 @@ from sqlalchemy import text
 
 from .config import allowed_origin_regex, allowed_origins
 from .db import get_engine
-from .routers import history, products, profile
+from .routers import history, ocr, products, profile
 
 app = FastAPI(title="알레르기 체크 API", version="0.1.0")
 
@@ -19,6 +19,7 @@ app.add_middleware(
 app.include_router(products.router)
 app.include_router(profile.router)
 app.include_router(history.router)
+app.include_router(ocr.router)
 
 
 @app.get("/health")

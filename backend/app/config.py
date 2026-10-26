@@ -66,3 +66,25 @@ def allowed_origins() -> list[str]:
 def allowed_origin_regex() -> str | None:
     """매번 바뀌는 주소(예: 터널)를 허용할 때만 설정. 예) https://.*\\.trycloudflare\\.com"""
     return os.environ.get("ALLOWED_ORIGIN_REGEX", "").strip() or None
+
+
+# ---------- OCR (OpenRouter) ----------
+def openrouter_api_key() -> str:
+    """키 값은 어디에도 출력하지 않는다. 없으면 빈 문자열."""
+    return os.environ.get("OPENROUTER_API_KEY", "").strip().strip("\"'")
+
+
+def openrouter_model() -> str:
+    return os.environ.get("OPENROUTER_MODEL", "").strip() or "google/gemini-3.8-flash"
+
+
+def ocr_max_image_bytes() -> int:
+    return int(os.environ.get("OCR_MAX_IMAGE_MB", "5")) * 1024 * 1024
+
+
+def ocr_timeout_s() -> float:
+    return float(os.environ.get("OCR_TIMEOUT_S", "30"))
+
+
+def ocr_rate_limit_per_min() -> int:
+    return int(os.environ.get("OCR_RATE_LIMIT_PER_MIN", "10"))
