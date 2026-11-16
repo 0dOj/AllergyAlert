@@ -86,3 +86,11 @@ def current_user(authorization: str | None = Header(default=None)) -> CurrentUse
     if scheme.lower() != "bearer" or not token:
         raise _unauthorized()
     return verify_token(token)
+
+
+def user_if_member(member_id: uuid.UUID | None = None,
+                   authorization: str | None = Header(default=None)) -> CurrentUser | None:
+    """member_id 쿼리가 있을 때만 토큰을 요구한다. 없으면 토큰을 보지 않고 None."""
+    if member_id is None:
+        return None
+    return current_user(authorization)

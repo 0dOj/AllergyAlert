@@ -74,7 +74,8 @@ def test_list_filters_by_owner(env):
     client, conn = env
     assert client.get("/history").status_code == 200
     sql, params = last(conn)
-    assert "where owner_id = :owner" in sql and params["owner"] == ME
+    assert "where h.owner_id = :owner" in sql and params["owner"] == ME
+    assert "left join member m" in sql
 
 
 def test_read_filters_by_owner_and_other_is_404(env):

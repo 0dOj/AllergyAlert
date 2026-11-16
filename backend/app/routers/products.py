@@ -1,16 +1,19 @@
 import os
+import uuid
 from typing import Literal
 
 import psycopg
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import JSONResponse
 from sqlalchemy import text
 from sqlalchemy.exc import DBAPIError
 
+from ..auth import CurrentUser, user_if_member
 from ..barcode import MAX_LEN, MIN_LEN, is_valid_length, normalize_barcode
 from ..db import get_engine
 from ..deps import get_dictionary
 from ..services.check import build_result
+from ..services.members import NO_ALLERGENS_BODY, get_member, member_problem
 from ..services.profile import get_profile_codes
 from ..services.search import LIMIT, build_where, parse_query
 
@@ -46,16 +49,32 @@ def lookup_by_barcode(barcode: str):
 
 
 @router.get("/{report_no}/judge")
-def judge_product(report_no: str, barcode: str | None = None):
-    """F-05/06/07: 저장된 프로필 기준 알레르기 판정. 프로필이 비어 있으면 400.
-    barcode 는 선택: 같은 품목보고번호에 바코드가 여러 개일 때 보여줄 바코드를 고른다."""
+def judge_product(report_no: str, barcode: str | None = None, member_id: uuid.UUID | None = None,
+                  user: CurrentUser | None = Depends(user_if_member)):
+    """F-05/06/07: 알레르기 판정. 기본은 저장된 공유 프로필 기준이며 비어 있으면 400.
+    barcode 는 선택: 같은 품목보고번호에 바코드가 여러 개일 때 보여줄 바코드를 고른다.
+    member_id 는 선택: 주면 토큰이 필요하고 내 구성원의 알레르겐으로 판정한다.
+    남의 구성원이거나 없으면 404, 구성원의 코드가 비어 있으면 400 + {"action": "set_allergens"}."""
     bc = normalize_barcode(barcode) if barcode else None
     with get_engine().connect() as conn:
-        selected = get_profile_codes(conn)
-        if not selected:
-            return JSONResponse(status_code=400, content={
-                "detail": "알레르겐 프로필을 먼저 설정하세요.", "action": "set_profile"})
-        result = build_result(conn, report_no, bc, selected, get_dictionary())
+        member = None
+        if member_id is None:
+            selected = get_profile_codes(conn)
+            if not selected:
+                return JSONResponse(status_code=400, content={
+                    "detail": "알레르겐 프로필을 먼저 설정하세요.", "action": "set_profile"})
+        else:
+            member = get_member(conn, user.id, member_id, get_dictionary().names)
+            problem = member_problem(member)
+            if problem is not None:
+                return problem
+            selected = member["codes"]
+        try:
+            result = build_result(conn, report_no, bc, selected, get_dictionary(), member)
+        except ValueError:
+            if member is None:
+                raise
+            return JSONResponse(status_code=400, content=NO_ALLERGENS_BODY)
     if result is None:
         return JSONResponse(status_code=404, content={"detail": "제품을 찾을 수 없습니다."})
     return result
