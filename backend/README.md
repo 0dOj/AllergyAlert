@@ -19,12 +19,14 @@ uvicorn app.main:app --reload --reload-dir app
 | F-05~07 판정 (저장된 프로필 기준) | `GET /products/{report_no}/judge?barcode=` |
 | F-08 알레르겐 목록 / 프로필 | `GET /allergens`, `GET/PUT /profile` |
 | F-10 이력 (로그인 토큰 필요) | `POST /history`, `GET /history`, `GET /history/{id}`, `DELETE /history/{id}` |
+| 구성원 (로그인 토큰 필요) | `GET /members`, `POST /members`, `PUT /members/{id}`, `DELETE /members/{id}` |
 | 점검 | `GET /health` |
 
 - 제품명 검색: 2글자 이상(공백 제외), 단어는 공백 구분(모두 포함), 최대 20건, 0건도 200 + `[]`. 인덱스가 없어 드문 검색어는 전체를 훑으므로 3초(`SEARCH_TIMEOUT_MS`)가 지나면 `503`으로 중단한다. `scope=barcodes`는 원재료가 없는 포장육·수입식품도 찾는다.
 - 프로필이 비어 있으면 판정·이력 저장은 `400` + `{"action": "set_profile"}`.
 - `POST /history` 는 판정을 서버에서 다시 계산해 스냅샷으로 저장한다. `GET /history/{id}` 는 그 스냅샷을 그대로 돌려준다.
 - 이력 4개 엔드포인트는 `Authorization: Bearer <Supabase 토큰>` 이 필요하다(익명 로그인 토큰 포함). 토큰은 `SUPABASE_URL` 의 JWKS(ES256)로 검증하고, 실패는 `401`, 서버에 `SUPABASE_URL` 이 없거나 JWKS 를 못 받으면 `503`. 이력은 토큰의 사용자(`owner_id`) 것만 조회·삭제되며 남의 id 는 `404` 이다. `SUPABASE_URL` 이 없어도 다른 엔드포인트는 동작한다.
+- 구성원은 사용자당 최대 10명이며 11번째 `POST /members` 는 `409`. `PUT` 은 이름·관계·알레르겐 코드를 통째로 교체한다. 코드는 사전에 있는 것만 허용하고(없으면 `422` 와 해당 코드), 중복은 입력 순서를 유지해 제거한다. 남의 구성원 id 는 `404`, 형식이 틀린 id 는 `422` 이다.
 - `user_profile.allergen_ids` 에는 알레르겐 **코드**(MILK 등)를 저장한다.
 - 알레르겐 사전은 서버 시작 후 처음 필요할 때 읽어 메모리에 둔다. 시드를 고치면 서버를 재시작한다.
 
