@@ -14,7 +14,7 @@ router = APIRouter(prefix="/members", tags=["members"])
 
 MAX_MEMBERS = 10
 
-_COLUMNS = "id, name, relation, allergen_codes, created_at"
+_COLUMNS = "id, name, relation, allergen_codes, notes, avatar_color, created_at"
 
 
 class MemberIn(BaseModel):
@@ -23,11 +23,13 @@ class MemberIn(BaseModel):
     name: str = Field(min_length=1, max_length=30)
     relation: str | None = Field(default=None, max_length=20)
     allergen_codes: list[str] = Field(max_length=30)
+    notes: str | None = Field(default=None, max_length=200)
+    avatar_color: str | None = Field(default=None, max_length=40)
 
-    @field_validator("relation")
+    @field_validator("relation", "notes", "avatar_color")
     @classmethod
-    def blank_relation_is_none(cls, v: str | None) -> str | None:
-        """공백만 보낸 관계는 값이 없는 것으로 본다."""
+    def blank_is_none(cls, v: str | None) -> str | None:
+        """공백만 보낸 관계, 메모, 아바타 색은 값이 없는 것으로 본다."""
         return v or None
 
 
@@ -36,6 +38,8 @@ class MemberOut(BaseModel):
     name: str
     relation: str | None
     allergen_codes: list[str]
+    notes: str | None = None
+    avatar_color: str | None = None
     created_at: datetime | None
 
 
@@ -73,12 +77,14 @@ def create_member(body: MemberIn, user: CurrentUser = Depends(current_user)):
         conn.execute(text("select pg_advisory_xact_lock(hashtextextended(cast(:owner as text), 0))"),
                      {"owner": user.id})
         row = conn.execute(text(
-            "insert into member (owner_id, name, relation, allergen_codes) "
-            "select cast(:owner as uuid), cast(:name as text), cast(:rel as text), cast(:codes as text[]) "
+            "insert into member (owner_id, name, relation, allergen_codes, notes, avatar_color) "
+            "select cast(:owner as uuid), cast(:name as text), cast(:rel as text), cast(:codes as text[]), "
+            "cast(:notes as text), cast(:color as text) "
             "where (select count(*) from member where owner_id = cast(:owner as uuid)) < :max "
             f"returning {_COLUMNS}"),
             {"owner": user.id, "name": body.name, "rel": body.relation,
-             "codes": codes, "max": MAX_MEMBERS}).mappings().first()
+             "codes": codes, "notes": body.notes, "color": body.avatar_color,
+             "max": MAX_MEMBERS}).mappings().first()
     if row is None:
         return JSONResponse(status_code=409, content={
             "detail": f"구성원은 최대 {MAX_MEMBERS}명까지 만들 수 있습니다."})
@@ -87,13 +93,15 @@ def create_member(body: MemberIn, user: CurrentUser = Depends(current_user)):
 
 @router.put("/{member_id}", response_model=MemberOut)
 def replace_member(member_id: uuid.UUID, body: MemberIn, user: CurrentUser = Depends(current_user)):
-    """이름, 관계, 알레르겐 코드를 통째로 교체한다. 남의 구성원은 없는 것처럼 404."""
+    """이름, 관계, 알레르겐 코드, 메모, 아바타 색을 통째로 교체한다(빠진 선택 필드는 null). 남의 구성원은 없는 것처럼 404."""
     codes = _clean_codes(body.allergen_codes)
     with get_engine().begin() as conn:
         row = conn.execute(text(
-            "update member set name = :name, relation = :rel, allergen_codes = cast(:codes as text[]) "
+            "update member set name = :name, relation = :rel, allergen_codes = cast(:codes as text[]), "
+            "notes = :notes, avatar_color = :color "
             f"where id = :i and owner_id = :owner returning {_COLUMNS}"),
             {"name": body.name, "rel": body.relation, "codes": codes,
+             "notes": body.notes, "color": body.avatar_color,
              "i": member_id, "owner": user.id}).mappings().first()
     if row is None:
         return _not_found()

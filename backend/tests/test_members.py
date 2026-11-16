@@ -56,7 +56,8 @@ class FakeConn:
     @staticmethod
     def _row(params):
         return {"id": uuid.UUID(MID), "name": params["name"], "relation": params["rel"],
-                "allergen_codes": params["codes"], "created_at": "2026-01-01T00:00:00Z"}
+                "allergen_codes": params["codes"], "notes": params.get("notes"),
+                "avatar_color": params.get("color"), "created_at": "2026-01-01T00:00:00Z"}
 
 
 class FakeEngine:
@@ -96,7 +97,8 @@ def test_create_returns_201_and_member(env):
     r = client.post("/members", json=body())
     assert r.status_code == 201
     assert r.json() == {"id": MID, "name": "민수", "relation": "자녀",
-                        "allergen_codes": ["MILK"], "created_at": "2026-01-01T00:00:00Z"}
+                        "allergen_codes": ["MILK"], "notes": None, "avatar_color": None,
+                        "created_at": "2026-01-01T00:00:00Z"}
     insert_sql, params = conn.calls[-1]
     assert insert_sql.lstrip().startswith("insert into member (owner_id,")
     assert params["owner"] == ME
@@ -134,6 +136,54 @@ def test_name_31_chars_is_422_and_30_is_ok(env):
     assert client.post("/members", json=body(name="가" * 31)).status_code == 422
     assert conn.calls == []
     assert client.post("/members", json=body(name="가" * 30)).status_code == 201
+
+
+def test_profile_fields_saved_and_returned(env):
+    client, conn = env
+    r = client.post("/members", json=body(notes="  견과류 주의  ", avatar_color="#ff8800"))
+    assert r.status_code == 201
+    assert r.json()["notes"] == "견과류 주의" and r.json()["avatar_color"] == "#ff8800"
+    _, params = conn.calls[-1]
+    assert params["notes"] == "견과류 주의" and params["color"] == "#ff8800"
+
+
+def test_put_replaces_profile_fields_and_missing_become_null(env):
+    client, conn = env
+    conn.found = True
+    r = client.put(f"/members/{MID}", json=body(notes="메모", avatar_color="blue"))
+    assert r.json()["notes"] == "메모" and r.json()["avatar_color"] == "blue"
+    r = client.put(f"/members/{MID}", json=body())
+    assert r.json()["notes"] is None and r.json()["avatar_color"] is None
+    assert conn.calls[-1][1]["notes"] is None and conn.calls[-1][1]["color"] is None
+
+
+def test_notes_201_chars_is_422_and_200_is_ok(env):
+    client, conn = env
+    assert client.post("/members", json=body(notes="가" * 201)).status_code == 422
+    assert conn.calls == []
+    assert client.post("/members", json=body(notes="가" * 200)).status_code == 201
+
+
+def test_avatar_color_41_chars_is_422_and_40_is_ok(env):
+    client, conn = env
+    assert client.post("/members", json=body(avatar_color="a" * 41)).status_code == 422
+    assert conn.calls == []
+    assert client.post("/members", json=body(avatar_color="a" * 40)).status_code == 201
+
+
+def test_blank_notes_and_color_become_null(env):
+    client, conn = env
+    r = client.post("/members", json=body(notes="   ", avatar_color="  "))
+    assert r.status_code == 201
+    assert r.json()["notes"] is None and r.json()["avatar_color"] is None
+    assert conn.calls[-1][1]["notes"] is None and conn.calls[-1][1]["color"] is None
+
+
+def test_request_without_profile_fields_still_works(env):
+    client, _ = env
+    r = client.post("/members", json={"name": "민수", "allergen_codes": []})
+    assert r.status_code == 201
+    assert r.json()["notes"] is None and r.json()["avatar_color"] is None
 
 
 def test_unknown_field_is_422(env):
