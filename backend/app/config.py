@@ -68,6 +68,12 @@ def allowed_origin_regex() -> str | None:
     return os.environ.get("ALLOWED_ORIGIN_REGEX", "").strip() or None
 
 
+# ---------- 사용자 인증 (Supabase) ----------
+def supabase_url() -> str:
+    """값은 어디에도 출력하지 않는다. 없으면 빈 문자열. 끝의 / 는 떼어 낸다."""
+    return os.environ.get("SUPABASE_URL", "").strip().strip("\"'").rstrip("/")
+
+
 # ---------- OCR (OpenRouter) ----------
 def openrouter_api_key() -> str:
     """키 값은 어디에도 출력하지 않는다. 없으면 빈 문자열."""
