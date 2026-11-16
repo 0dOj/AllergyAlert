@@ -31,7 +31,8 @@ Supabase(PostgreSQL)에 식약처 공공데이터와 알레르겐 사전이 들�
 | `allergen_keywords` | 347 | 동의어 303 + 제외어 44. **알레르겐별** 제외어 |
 | `term_rules` | 27 | 복합원재료 17 / 향료 5 / 모호표기 5. 알레르겐과 무관한 전역 규칙. `$` 로 시작하면 접미사 |
 | `user_profile` | - | 단일 사용자. `allergen_ids` 는 jsonb |
-| `scan_history` | - | 조회 이력. `matched` 는 판정 스냅샷(jsonb), 재계산하지 않는다 |
+| `scan_history` | - | 조회 이력. `matched` 는 판정 스냅샷(jsonb), 재계산하지 않는다. `owner_id` 는 `auth.users.id` (서버는 항상 값을 넣고 소유자 조건으로만 조회한다) |
+| `member` | - | 로그인 사용자(`owner_id`)가 관리하는 알레르기 대상자. `notes`(200자 이하), `avatar_color`(40자 이하)는 `07_member_profile_fields.sql` 로 추가했고 NULL 허용 |
 | `ingest_log` | - | 적재 이력 |
 
 ## 3. 꼭 지킬 규칙
@@ -109,10 +110,11 @@ update user_profile set allergen_ids = :ids::jsonb where id = :id;
 
 **F-10 이력**
 ```sql
-insert into scan_history (barcode, report_no, product_name, verdict, matched)
-values (:barcode, :report_no, :name, :verdict, :matched::jsonb);
-select id, product_name, verdict, scanned_at from scan_history order by scanned_at desc limit 50;
-delete from scan_history where id = :id;
+insert into scan_history (owner_id, barcode, report_no, product_name, verdict, matched)
+values (:owner, :barcode, :report_no, :name, :verdict, :matched::jsonb);
+select id, product_name, verdict, scanned_at from scan_history where owner_id = :owner order by scanned_at desc limit 50;
+select id, scanned_at, matched from scan_history where id = :id and owner_id = :owner;
+delete from scan_history where id = :id and owner_id = :owner;
 ```
 
 ## 5. 알려진 한계

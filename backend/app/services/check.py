@@ -38,9 +38,12 @@ def fetch_product(conn, report_no: str, barcode: str | None = None) -> dict | No
     }
 
 
-def build_result(conn, report_no: str, barcode: str | None, selected: list[str], d: Dictionary) -> dict | None:
+def build_result(conn, report_no: str, barcode: str | None, selected: list[str], d: Dictionary,
+                 member: dict | None = None) -> dict | None:
+    """member 는 {id, name} 을 가진 사전(구성원 판정일 때만). profile 에는 판정에 쓴 코드가 들어간다."""
     product = fetch_product(conn, report_no, barcode)
     if product is None:
         return None
     v = judge(product["raw_material"], selected, d)
-    return {"product": product, **v.to_dict(), "profile": selected, "disclaimer": DISCLAIMER}
+    return {"product": product, **v.to_dict(), "profile": selected, "disclaimer": DISCLAIMER,
+            "member": {"id": member["id"], "name": member["name"]} if member else None}
